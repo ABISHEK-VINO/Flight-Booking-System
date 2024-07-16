@@ -52,7 +52,7 @@ router.put("/:id", async (req, res) => {
         const booking = await Booking.findByIdAndUpdate(req.params.id, req.body, { new: true });
         await sendBookingEmail(booking, true);
         const io = req.app.get("socketio");
-        io.emit("bookingUpdated", booking); // Consistent naming
+        io.emit("bookingUpdated", booking); 
         res.json(booking);
     } catch (err) {
         res.status(400).json({ error: err.message });
