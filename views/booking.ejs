@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      <%= isUpdate ? "Updated Booking Confirmation" : "Booking Confirmation" %>
+    </title>
+    <style>
+      * {
+        margin: 10px;
+        padding: 10px;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: #313131;
+        text-align: center;
+      }
+      p {
+        font-size: 29px;
+        margin-left: 190px;
+      }
+    </style>
+  </head>
+  <body>
+      <b>
+        <h1>
+          <%= isUpdate ? "Updated Booking Confirmation" : "Booking Confirmation"
+          %>
+        </h1>
+      </b>
+    <p>Flight Number : <%= booking.flightNumber %></p>
+    <p>Boarding Pass Number : <%= booking.boardingpassnumber %></p>
+    <p>Passenger Name : <%= booking.passengerName %></p>
+    <p>From: <%= booking.fromLocation %></p>
+    <p>To: <%= booking.toLocation %></p>
+    <p>Departure Date : <%= booking.departureDate %></p>
+    <p>Seat Number : <%= booking.seatNumber %></p>
+  </body>
+</html>
